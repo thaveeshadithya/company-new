@@ -1,8 +1,8 @@
 const WORKING_HOURS = 8; // 8 Hours
 const LUNCH_TIME = 1;    // 1 Hour Break
 const DAYS_IN_MONTH = 31;
-const DEFAULT_ARRIVAL = "09:00";
-const DEFAULT_LEAVING = "17:00";
+const DEFAULT_ARRIVAL = "07:00";
+const DEFAULT_LEAVING = "19:00";
 
 function createDayColumns() {
     const headerRow = document.querySelector('#attendanceTable thead tr');
