@@ -1,0 +1,69 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    overflow-x: auto; /* Enable horizontal scroll */
+}
+
+table {
+    width: 100%; /* Table takes full container width */
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 1000px; /* Prevent table from shrinking */
+}
+
+th, td {
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+    padding: 12px; /* Keep padding for header cells */
+}
+
+td {
+    padding: 0; /* Remove padding for inputs */
+}
+
+td input {
+    width: 100%; /* Input fills entire cell */
+    height: 100%; /* Match height to cell */
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.output {
+    font-weight: bold;
+    color: #1976d2;
+    background: #e3f2fd !important;
+}
