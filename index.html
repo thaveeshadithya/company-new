@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Sheet</title>
+    <title>Employee Attendance Sheet</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <h1>Employee Attendance Sheet</h1>
-    <div class="controls">
-        <button onclick="addNewEmployee()">Add New Employee</button>
-    </div>
-    <div class="table-container">
-        <table id="attendanceTable">
-            <thead>
-            <tr>
-                <th>Employee Name</th>
-            </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
+<div id="downloadexcell">
+    <div class="container">
+        <h1>Employee Attendance Sheet</h1>
+        <div class="controls">
+            <button onclick="addNewEmployee()">Add New Employee</button>
+            <button onclick="downloadExcel()">Download Excel</button>
+        </div>
+        <div class="table-container">
+            <table id="attendanceTable">
+                <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 <script src="script.js"></script>

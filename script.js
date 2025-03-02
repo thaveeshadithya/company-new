@@ -121,6 +121,29 @@ function formatTime(minutes) {
     return `${hours}h ${mins.toString().padStart(2, '0')}m`;
 }
 
+function downloadExcel() {
+    let csv = [];
+    const rows = document.querySelectorAll("#attendanceTable tr");
+
+    // Loop through each table row
+    rows.forEach(row => {
+        let rowData = [];
+        row.querySelectorAll("th, td").forEach(cell => {
+            let cellValue = cell.querySelector("input") ? cell.querySelector("input").value : cell.textContent;
+            rowData.push(cellValue);
+        });
+        csv.push(rowData.join(","));
+    });
+    // Convert Array to CSV String
+    let csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
+    // Create Download Link
+    let link = document.createElement("a");
+    link.setAttribute("href", encodeURI(csvContent));
+    link.setAttribute("download", "Employee_Attendance_Sheet.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 document.addEventListener('DOMContentLoaded', () => {
     createDayColumns();
     addNewEmployee();
